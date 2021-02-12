@@ -60,7 +60,7 @@ python pintool.py xx_warmup_obf -e -l 30
 ### 探测每位flag变化
 
 ```bash
-python pintool.py xx_warmup_obf -a 64_0 -l 28 -c 1,2 -b {}_ -f
+python pintool.py xx_warmup_obf -l 28 -c 1,2 -b {}_ -f
 ```
 
 ![image-20200916000221666](imgs/image-20200916000221666.png)
@@ -72,7 +72,7 @@ python pintool.py xx_warmup_obf -a 64_0 -l 28 -c 1,2 -b {}_ -f
 尝试第二位
 
 ```bash
-python pintool.py xx_warmup_obf -a 64_0 -l 28 -c 1,2 -b {}_ -i f -f
+python pintool.py xx_warmup_obf -l 28 -c 1,2 -b {}_ -i f -f
 ```
 
 首先指定输入为f，不用从头开始爆破，
@@ -90,7 +90,7 @@ python pintool.py xx_warmup_obf -a 64_0 -l 28 -c 1,2 -b {}_ -i f -f
 #### xx_warmup_obf
 
 ```bash
-python pintool.py xx_warmup_obf -a 64_0 -l 28 -c 1,2,3 -b {}_  -i flag{
+python pintool.py xx_warmup_obf -l 28 -c 1,2,3 -b {}_  -i flag{
 ```
 
 
@@ -104,7 +104,7 @@ python pintool.py xx_warmup_obf -a 64_0 -l 28 -c 1,2,3 -b {}_  -i flag{
 #### reverse400
 
 ```bash
-python pintool.py -l 37 -c 4 -i CTF{ -b }_ -s - -a 32_0 -d ">= 1300"
+python pintool.py -l 37 -c 4 -i CTF{ -b }_ -s - -d ">= 1300"
 ```
 
 至于长度跟已知的flag，这个我是根据例子来的，已知正确flag了，发觉规律是1300以上的为正确flag，设置-d即可
@@ -118,7 +118,7 @@ python pintool.py -l 37 -c 4 -i CTF{ -b }_ -s - -a 32_0 -d ">= 1300"
 这里探测到长度为28，用块级插桩出错了，探测到28位
 
 ```bash
-python pintool.py -a 64_1 wyvern -e -l 32
+python pintool.py wyvern -e -l 32
 ```
 
 ![image-20200916000916978](imgs/image-20200916000916978.png)
